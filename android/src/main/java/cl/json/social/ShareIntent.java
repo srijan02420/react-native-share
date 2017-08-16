@@ -41,7 +41,7 @@ public abstract class ShareIntent {
                 this.getIntent().putExtra(Intent.EXTRA_TEXT, options.getString("message"));
                 this.getIntent().addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             } else {
-                this.getIntent().putExtra(Intent.EXTRA_TEXT, options.getString("message") + " " + options.getString("url"));
+                this.getIntent().putExtra(Intent.EXTRA_TEXT, options.getString("message"));
             }
         } else if (ShareIntent.hasValidKey("url", options)) {
             ShareFile fileShare = getFileShare(options);
